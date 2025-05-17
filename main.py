@@ -3,12 +3,15 @@ from discord.ext import commands
 from datetime import datetime
 import os
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 from zoneinfo import ZoneInfo
 IST = ZoneInfo("Asia/Kolkata")
 
 # Load token from .env file
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
+
+keep_alive()
 
 # Intents
 intents = discord.Intents.default()
